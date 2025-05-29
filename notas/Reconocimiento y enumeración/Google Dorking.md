@@ -1,123 +1,130 @@
+---
+created: 2025-03-25T13:15
+updated: 2025-05-29T18:18
+---
+# Reconocimiento Web
 
-#### Recursos web
-- [Pentest-Tools](https://pentest-tools.com/information-gathering/google-hacking)
-- [Exploit-DB](https://www.exploit-db.com/google-hacking-database)
+## Recursos web
 
-| **Google Dork**                                                       | **Descripción**                                                  |
-| --------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `site:example.com`                                                    | Busca todo el contenido indexado en el dominio.                  |
-| `filetype:pdf site:example.com`                                       | Busca archivos PDF en el dominio.                                |
-| `intitle:"index of" site:example.com`                                 | Busca directorios indexados en el dominio.                       |
-| `inurl:admin site:example.com`                                        | Busca URLs que contengan "admin" en el dominio.                  |
-| `intext:"password" site:example.com`                                  | Busca páginas que contengan la palabra "password".               |
-| `filetype:xls OR filetype:xlsx site:example.com`                      | Busca hojas de cálculo Excel en el dominio.                      |
-| `inurl:login site:example.com`                                        | Busca páginas de inicio de sesión en el dominio.                 |
-| `filetype:log intext:"error" site:example.com`                        | Busca archivos de registro que contengan la palabra "error".     |
-| `inurl:"phpinfo.php" site:example.com`                                | Busca páginas que revelen información PHP del servidor.          |
-| `site:example.com intext:"@example.com"`                              | Busca direcciones de correo electrónico en el dominio.           |
-| `filetype:doc OR filetype:docx site:example.com`                      | Busca documentos de Word en el dominio.                          |
-| `inurl:"/config" site:example.com`                                    | Busca archivos de configuración en el dominio.                   |
-| `filetype:env "DB_PASSWORD" site:example.com`                         | Busca archivos .env que contengan contraseñas de bases de datos. |
-| `inurl:"/cgi-bin/" site:example.com`                                  | Busca directorios CGI-BIN en el dominio.                         |
-| `intitle:"index of" "backup" site:example.com`                        | Busca directorios que contengan copias de seguridad.             |
-| `inurl:"wp-content/uploads" site:example.com`                         | Busca archivos subidos en instalaciones de WordPress.            |
-| `site:example.com intext:"phone" OR intext:"contact" OR intext:"tel"` | Busca números de teléfono en el dominio.                         |
-| `inurl:wp-content/plugins/ site:example.com`                          | Busca plugins de WordPress en el dominio.                        |
-| `inurl:wp-admin/ OR inurl:wp-login.php site:example.com`              | Busca paneles de administración de WordPress.                    |
-| `inurl:readme.html site:example.com`                                  | Busca versiones de CMS u otros servicios.                        |
-| `inurl:dashboard site:example.com`                                    | Busca paneles de administración en general.                      |
-```ad-quote
-- Encontrar páginas de inicio de sesión:
-    - `site:example.com inurl:login`
-    - `site:example.com (inurl:login OR inurl:admin)`
-- Identificación de archivos expuestos:
-    - `site:example.com filetype:pdf`
-    - `site:example.com (filetype:xls OR filetype:docx)`
-- Descubriendo archivos de configuración:
-    - `site:example.com inurl:config.php`
-    - `site:example.com (ext:conf OR ext:cnf)` (busca extensiones comúnmente utilizadas para archivos de configuración)
-- Localización de copias de seguridad de bases de datos:
-    - `site:example.com inurl:backup`
-    - `site:example.com filetype:sql`
-```
+- [Pentest-Tools – Google Hacking](https://pentest-tools.com/information-gathering/google-hacking)  
+- [Exploit-DB – Google Hacking Database](https://www.exploit-db.com/google-hacking-database)
+
+| Google Dork                                                        | Descripción                                                 |
+| ------------------------------------------------------------------ | ----------------------------------------------------------- |
+| `site:example.com`                                                 | Busca todo el contenido indexado en el dominio.            |
+| `filetype:pdf site:example.com`                                    | Busca archivos PDF en el dominio.                          |
+| `intitle:"index of" site:example.com`                              | Busca directorios indexados en el dominio.                 |
+| `inurl:admin site:example.com`                                     | Busca URLs que contengan “admin” en el dominio.            |
+| `intext:"password" site:example.com`                               | Busca páginas que contengan la palabra “password”.         |
+| `filetype:xls OR filetype:xlsx site:example.com`                   | Busca hojas de cálculo Excel en el dominio.                |
+| `inurl:login site:example.com`                                     | Busca páginas de inicio de sesión en el dominio.           |
+| `filetype:log intext:"error" site:example.com`                     | Busca archivos de registro que contengan la palabra “error”. |
+| `inurl:"phpinfo.php" site:example.com`                             | Busca páginas que revelen información PHP del servidor.    |
+| `site:example.com intext:"@example.com"`                           | Busca direcciones de correo electrónico en el dominio.     |
+| `filetype:doc OR filetype:docx site:example.com`                   | Busca documentos de Word en el dominio.                    |
+| `inurl:"/config" site:example.com`                                 | Busca archivos de configuración en el dominio.             |
+| `filetype:env "DB_PASSWORD" site:example.com`                      | Busca archivos .env que contengan contraseñas de bases de datos. |
+| `inurl:"/cgi-bin/" site:example.com`                               | Busca directorios CGI-BIN en el dominio.                   |
+| `intitle:"index of" "backup" site:example.com`                     | Busca directorios que contengan copias de seguridad.       |
+| `inurl:"wp-content/uploads" site:example.com`                      | Busca archivos subidos en instalaciones de WordPress.      |
+| `site:example.com intext:"phone" OR intext:"contact" OR intext:"tel"` | Busca números de teléfono en el dominio.                |
+| `inurl:wp-content/plugins/ site:example.com`                       | Busca plugins de WordPress en el dominio.                  |
+| `inurl:wp-admin/ OR inurl:wp-login.php site:example.com`           | Busca paneles de administración de WordPress.              |
+| `inurl:readme.html site:example.com`                               | Busca versiones de CMS u otros servicios.                  |
+| `inurl:dashboard site:example.com`                                 | Busca paneles de administración en general.                |
+
+::: quote
+#### Más ejemplos de Google Dorks
+
+- **Encontrar páginas de inicio de sesión**  
+  - `site:example.com inurl:login`  
+  - `site:example.com (inurl:login OR inurl:admin)`
+
+- **Identificación de archivos expuestos**  
+  - `site:example.com filetype:pdf`  
+  - `site:example.com (filetype:xls OR filetype:docx)`
+
+- **Descubrimiento de archivos de configuración**  
+  - `site:example.com inurl:config.php`  
+  - `site:example.com (ext:conf OR ext:cnf)`
+
+- **Localización de copias de seguridad de bases de datos**  
+  - `site:example.com inurl:backup`  
+  - `site:example.com filetype:sql`
+:::
 
 ---
 
-# Web Archives
+## Archivos web
 
-```ad-note
-En el acelerado mundo digital, los sitios web van y vienen, dejando sólo rastros fugaces de su existencia. Sin embargo, gracias a [Wayback Machine de Internet Archive](https://web.archive.org/) , tenemos una oportunidad única de volver a visitar el pasado y explorar las huellas digitales de los sitios web tal como fueron.
-```
+::: note
+En el acelerado mundo digital, los sitios web van y vienen, dejando sólo rastros fugaces de su existencia. Gracias a [Wayback Machine de Internet Archive](https://web.archive.org/), podemos volver a visitar el pasado y explorar las huellas digitales de los sitios web tal como fueron.
+:::
 
-## ¿Qué es la Wayback Machine?
+### ¿Qué es la Wayback Machine?
 
-![](https://academy.hackthebox.com/storage/modules/144/wayback.png)
+![Wayback Machine](https://academy.hackthebox.com/storage/modules/144/wayback.png)
 
-```ad-quote
-La **Wayback Machine** es un archivo digital de sitios web, creado por Internet Archive en 1996, que permite ver versiones pasadas de páginas web. Funciona capturando instantáneas de sitios mediante rastreadores web, almacenando tanto el contenido como los recursos (HTML, CSS, imágenes, etc.). Los usuarios pueden acceder a estas versiones archivadas ingresando la URL y seleccionando una fecha.
+La **Wayback Machine** es un archivo digital de sitios web creado por Internet Archive en 1996. Permite ver versiones pasadas de páginas web capturando instantáneas mediante rastreadores web y almacenando contenido y recursos (HTML, CSS, imágenes, etc.). Los usuarios acceden ingresando la URL y seleccionando una fecha.
 
-Es valiosa para el **reconocimiento web** ya que permite:
+Es valiosa para el **reconocimiento web** porque permite:
 
-- Descubrir activos ocultos o vulnerabilidades en versiones anteriores de un sitio.
-- Rastrear cambios y patrones en la evolución de la página.
-- Recopilar inteligencia mediante contenido archivado.
-- Realizar reconocimiento pasivo sin interactuar con la infraestructura del sitio.
-```
+- Descubrir activos ocultos o vulnerabilidades en versiones anteriores de un sitio.  
+- Rastrear cambios y patrones en la evolución de la página.  
+- Recopilar inteligencia mediante contenido archivado.  
+- Realizar reconocimiento pasivo sin interactuar con la infraestructura del sitio.  
 
 ---
 
-## Automating Recon
+## Automatización del reconocimiento
 
-```ad-info
-Si bien el reconocimiento manual puede ser eficaz, también puede llevar mucho tiempo y ser propenso a errores humanos. La automatización de las tareas de reconocimiento web puede mejorar significativamente la eficiencia y la precisión, permitiéndole recopilar información a escala e identificar vulnerabilidades potenciales más rápidamente.
-```
+::: info
+La automatización de las tareas de reconocimiento web mejora la eficiencia y precisión, permitiendo recopilar información a escala e identificar vulnerabilidades potenciales más rápidamente.
+:::
 
-- **FinalRecon**: Herramienta modular en Python que permite tareas como verificación de certificados SSL, recopilación de información Whois y análisis de encabezados, facilitando la personalización según necesidades específicas.
-    
-- **Recon-ng**: Un marco poderoso en Python con módulos para tareas de reconocimiento como enumeraciones de DNS, descubrimiento de subdominios y escaneo de puertos, además de la capacidad de explotar vulnerabilidades conocidas.
-    
-- **theHarvester**: Diseñada para recopilar información como direcciones de correo electrónico y subdominios de fuentes públicas, utilizando motores de búsqueda y bases de datos como SHODAN.
-    
-- **SpiderFoot**: Herramienta de automatización de inteligencia que integra múltiples fuentes de datos para obtener información sobre objetivos, realizando búsquedas de DNS, rastreo web y escaneo de puertos.
-    
-- **OSINT Framework**: Colección de herramientas y recursos para la recopilación de inteligencia de código abierto, abarcando diversas fuentes como redes sociales y registros públicos.
+Entre las herramientas más populares:
+
+- **FinalRecon**: Framework modular en Python para verificación de certificados SSL, búsquedas Whois, análisis de encabezados y más.  
+- **Recon-ng**: Framework en Python con módulos para DNS, subdominios, escaneo de puertos y explotación de vulnerabilidades.  
+- **theHarvester**: Recopila correos electrónicos y subdominios de fuentes públicas (motores de búsqueda, SHODAN).  
+- **SpiderFoot**: Plataforma de inteligencia OSINT que integra múltiples fuentes (DNS, rastreo web, escaneo de puertos).  
+- **OSINT Framework**: Colección de herramientas y recursos para inteligencia de código abierto (redes sociales, registros públicos).
 
 ### FinalRecon
 
-```ad-quote
-- **Información de Encabezado**: Muestra detalles sobre el servidor, tecnologías utilizadas y posibles errores de configuración de seguridad.
-- **Búsqueda Whois**: Revela detalles de registro del dominio, como información del registrante y datos de contacto.
-- **Información del Certificado SSL**: Examina el certificado SSL/TLS para verificar su validez y el emisor.
-- **Crawlers**:
-    - **HTML, CSS, JavaScript**: Extrae enlaces y posibles vulnerabilidades de estos archivos.
-    - **Enlaces internos/externos**: Mapea la estructura del sitio web y conexiones a otros dominios.
-    - **Imágenes, robots.txt, sitemap.xml**: Recopila información sobre las rutas de rastreo del sitio.
-    - **Enlaces en JavaScript, Wayback Machine**: Encuentra enlaces ocultos y datos históricos.
-- **Enumeración DNS**: Consulta más de 40 tipos de registros DNS, incluidos registros DMARC.
-- **Enumeración de Subdominios**: Utiliza diversas fuentes de datos para descubrir subdominios.
-- **Enumeración de Directorios**: Permite listas de palabras personalizadas para encontrar directorios y archivos ocultos.
-- **Wayback Machine**: Recupera URL de los últimos cinco años para analizar cambios y posibles vulnerabilidades del sitio web.
-```
+::: quote
+- **Encabezados HTTP**: Detalles del servidor, tecnologías y posibles errores de configuración.  
+- **Whois**: Información de registro del dominio (registrante, datos de contacto).  
+- **SSL/TLS**: Verifica validez y emisor del certificado.  
+- **Crawlers**  
+  - HTML, CSS, JavaScript: Extracción de enlaces y búsqueda de vulnerabilidades.  
+  - Enlaces internos/externos: Mapeo de la estructura del sitio.  
+  - Imágenes, `robots.txt`, `sitemap.xml`: Rutas de rastreo.  
+  - Enlaces en JavaScript y Wayback Machine: Descubrimiento de enlaces ocultos e históricos.  
+- **DNS**: Más de 40 tipos de registros, incluyendo DMARC.  
+- **Subdominios**: Descubrimiento mediante múltiples fuentes.  
+- **Directorios**: Listas personalizadas para encontrar rutas ocultas.  
+- **Wayback Machine**: Recuperación de URL de los últimos cinco años.  
+:::
 
 ```bash
-# Instalación
 git clone https://github.com/thewhiteh4t/FinalRecon.git
 cd FinalRecon
 pip3 install -r requirements.txt
-chmod +x ./finalrecon.py
+chmod +x finalrecon.py
 ```
 
-| Opción         | Argumento | Descripción                                                     |
-| -------------- | --------- | --------------------------------------------------------------- |
-| `-h`, `--help` |           | Muestra el mensaje de ayuda y sal.                              |
-| `--url`        | URL       | Especifique la URL de destino.                                  |
-| `--headers`    |           | Recuperar información del encabezado de la URL de destino.      |
-| `--sslinfo`    |           | Obtenga información del certificado SSL para la URL de destino. |
-| `--whois`      |           | Realice una búsqueda Whois para el dominio de destino.          |
-| `--crawl`      |           | Rastree el sitio web de destino.                                |
-| `--dns`        |           | Realice una enumeración de DNS en el dominio de destino.        |
-| `--sub`        |           | Enumere los subdominios para el dominio de destino.             |
-| `--dir`        |           | Busque directorios en el sitio web de destino.                  |
-| `--wayback`    |           | Recuperar URL Wayback para el objetivo.                         |
-| `--ps`         |           | Realice un escaneo rápido de puertos en el objetivo.            |
-| `--full`       |           | Realice un escaneo de reconocimiento completo del objetivo.     |
+| Opción         | Argumento | Descripción                                  |
+| -------------- | --------- | -------------------------------------------- |
+| `-h`, `--help` |           | Muestra la ayuda y sale.                     |
+| `--url`        | URL       | URL de destino.                              |
+| `--headers`    |           | Recupera información de encabezados HTTP.    |
+| `--sslinfo`    |           | Obtiene información del certificado SSL/TLS. |
+| `--whois`      |           | Búsqueda Whois del dominio.                  |
+| `--crawl`      |           | Rastrea el sitio web.                        |
+| `--dns`        |           | Enumeración de DNS.                          |
+| `--sub`        |           | Descubre subdominios.                        |
+| `--dir`        |           | Busca directorios ocultos.                   |
+| `--wayback`    |           | Recupera URL archivadas en Wayback Machine.  |
+| `--ps`         |           | Escaneo rápido de puertos.                   |
+| `--full`       |           | Escaneo completo de reconocimiento.          |
