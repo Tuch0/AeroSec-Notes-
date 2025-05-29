@@ -1,8 +1,2 @@
-# Esteganografía
-
-- [[Enumeración]]
-
----
-
-![[Enumeración]]
+# Enumeración Pasiva
 

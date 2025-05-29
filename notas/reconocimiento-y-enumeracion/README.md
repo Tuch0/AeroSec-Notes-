@@ -1,2 +1,0 @@
-# Reconocimiento y enumeración
-
