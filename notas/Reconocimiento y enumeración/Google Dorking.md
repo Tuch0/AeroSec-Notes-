@@ -2,7 +2,8 @@
 created: 2025-03-25T13:15
 updated: 2025-05-29T18:24
 ---
-# Reconocimiento Web
+
+# Google Dorking
 
 ## Recursos web
 
@@ -33,26 +34,22 @@ updated: 2025-05-29T18:24
 | `inurl:readme.html site:example.com`                                  | Busca versiones de CMS u otros servicios.                        |
 | `inurl:dashboard site:example.com`                                    | Busca paneles de administración en general.                      |
 
-> #### Más ejemplos de Google Dorks
+> **Más ejemplos de Google Dorks**
 >
 > * **Encontrar páginas de inicio de sesión**
->
 >   * `site:example.com inurl:login`
 >   * `site:example.com (inurl:login OR inurl:admin)`
 > * **Identificación de archivos expuestos**
->
 >   * `site:example.com filetype:pdf`
 >   * `site:example.com (filetype:xls OR filetype:docx)`
 > * **Descubrimiento de archivos de configuración**
->
 >   * `site:example.com inurl:config.php`
 >   * `site:example.com (ext:conf OR ext:cnf)`
 > * **Localización de copias de seguridad de bases de datos**
->
 >   * `site:example.com inurl:backup`
 >   * `site:example.com filetype:sql`
 
----
+***
 
 ## Archivos web
 
@@ -60,7 +57,7 @@ updated: 2025-05-29T18:24
 
 ### ¿Qué es la Wayback Machine?
 
-![Wayback Machine](https://academy.hackthebox.com/storage/modules/144/wayback.png)
+<img src="../.gitbook/assets/wayback.webp" alt="" data-size="original">
 
 La **Wayback Machine** es un archivo digital de sitios web creado por Internet Archive en 1996. Permite ver versiones pasadas de páginas web capturando instantáneas mediante rastreadores web y almacenando contenido y recursos (HTML, CSS, imágenes, etc.). Los usuarios acceden ingresando la URL y seleccionando una fecha.
 
@@ -71,7 +68,7 @@ Es valiosa para el **reconocimiento web** porque permite:
 * Recopilar inteligencia mediante contenido archivado.
 * Realizar reconocimiento pasivo sin interactuar con la infraestructura del sitio.
 
----
+***
 
 ## Automatización del reconocimiento
 
@@ -91,7 +88,6 @@ Entre las herramientas más populares:
 > * **Whois**: Información de registro del dominio (registrante, datos de contacto).
 > * **SSL/TLS**: Verifica validez y emisor del certificado.
 > * **Crawlers**
->
 >   * HTML, CSS, JavaScript: Extracción de enlaces y búsqueda de vulnerabilidades.
 >   * Enlaces internos/externos: Mapeo de la estructura del sitio.
 >   * Imágenes, `robots.txt`, `sitemap.xml`: Rutas de rastreo.
